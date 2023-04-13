@@ -53,6 +53,7 @@ const sidebarData = {
     {
       text: "Đăng nhập để khám phá playlist dành riêng cho bạn",
       title: "ĐĂNG NHẬP",
+      class: "nav__login",
     },
     {
       text: "Nghe nhạc không quảng cáo cùng kho nhạc VIP",
@@ -156,14 +157,14 @@ function Sidebar(sidebarData, sidebarIcon) {
       )
       .join("")}
     ${sidebarData.banner
-      .map(
-        (obj) => `
-        <div class = 'banner'>
-          <p>${obj.text}</p>
-          <button>${obj.title}</button>
-        </div>
-      `
-      )
+      .map((obj) => {
+        if (!isLogin) {
+          return `<div class = 'banner'>
+        <p>${obj.text}</p>
+        <button class=${obj.class}>${obj.title}</button>
+      </div>`;
+        }
+      })
       .join("")}
     
   </div>
@@ -178,12 +179,6 @@ function Sidebar(sidebarData, sidebarIcon) {
 
   `;
 }
-const sidebarLogo = document.querySelector(".sidebar__logo");
-console.log(sidebarLogo);
-
-sidebarLogo.onclick = () => {
-  "/index.html/#";
-};
 
 const listsTitle = document.querySelectorAll(".list__title");
 

@@ -107,7 +107,7 @@ const libraryData = [
       {
         song: "Workin' On It (Acoustic)",
         artist: "Meghan Trainor",
-        path: "./assets/music/workChill/Workin' On It (Acoustic).mp3",
+        path: "./assets/music/workChill/Workin.mp3",
         thumbnail:
           "https://i2.wp.com/wiseloaded.com/wp-content/uploads/2020/07/Meghan-Trainor-%E2%80%93-Workin%E2%80%99-on-It-Acoustic.jpg?fit=700%2C699&ssl=1",
       },

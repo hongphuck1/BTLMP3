@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --primary-color: #3498db;
+  --red-color: #ff2525;
+}
+
+.Copyright {
+  font-weight: bold;
+  color: #44d9ed;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+.login {
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  top: 50%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  z-index: 20000;
+  animation: showLogin 0.8s ease forwards;
+  /* animation: hideLogin 0.8s ease forwards; */
+}
+
+@keyframes showLogin {
+  from {
+    left: 150%;
+    transform: rotate(0);
+  }
+  to {
+    left: 0%;
+    top: 0%;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hideLogin {
+  from {
+    left: 50%;
+    top: 50%;
+  }
+
+  to {
+    left: -400%;
+    transform: rotate(360deg);
+  }
+}
+
+.login--close {
+  position: fixed;
+  right: 40px;
+  top: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #111;
+  opacity: 0.8;
+}
+
+.login__main {
+  margin: 200px auto;
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.login__register-name {
+  color: #111;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 14px;
+  text-align: center;
+}
+
+.login__register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__form-group {
+  position: relative;
+  margin: 14px 0;
+}
+
+.login__form-group.invalid .input {
+  border-bottom: 2px solid red;
+  background-color: #fad1d1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.login__form-group.invalid .input.avatar {
+  background-color: #fff;
+}
+
+.login__form-group.invalid .login__form-messenger {
+  display: flex;
+  color: red;
+}
+
+.input {
+  height: 40px;
+  width: 100%;
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+  padding-left: 4px;
+  border-bottom: 2px solid #adadad;
+  position: relative;
+  color: #111;
+}
+
+.input:focus {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.login__form-messenger {
+  position: relative;
+  top: 6px;
+  font-size: 1.2rem;
+  margin-left: 4px;
+  display: none;
+}
+
+.groups__radio {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.groups__radio input {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.login__form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 30px;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.login__register-signup {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #777;
+}
+
+.login__register-signup a {
+  color: #08609a;
+  text-decoration: none;
+}
+
+.login__register-signup a:hover {
+  text-decoration: underline;
+}
+
+.login__open {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(1, 1, 1, 0.6);
+  /* transform: scale(0); */
+  animation: showAnimation 0.5s ease forwards;
+  /* display: inline-flex; */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.login__open__text {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.login__open__icon {
+  margin-top: 20px;
+  font-size: 180px;
+  animation: Loading 1.2s linear infinite;
+}
+
+@keyframes showAnimation {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes hideAnimation {
+  from {
+    transform: scale(1);
+    background-color: rgba(1, 1, 1, 0.6);
+  }
+  to {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(1, 1, 1, 1);
+  }
+}
+
+@keyframes Loading {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.succes-login {
+  background: url(/assets/images/chucmung.gif);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-top: 100%;
+  transition: all 0.5s;
+  display: none;
+}
+
+.succes-login.active {
+  display: flex;
+}
+.login__Account {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 4px;
+  padding: 10px 40px;
+  background-color: #858585;
+  display: none;
+  background-image: url(./assets/images/chucmung.gif);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  animation: showErrorLogin 0.5s ease-in-out forwards;
+  z-index: 200;
+}
+
+.login__notAccount {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 4px;
+  padding: 10px 40px;
+  background-color: #858585;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  animation: showErrorLogin 0.5s ease-in-out forwards;
+}
+
+@keyframes showErrorLogin {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(2.2);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+  }
+}
+
+.login__notAccount.active {
+  display: flex;
+}
+.login__Account.active {
+  display: flex;
+}
+
+.login__notAccount .btn-close {
+  transition: all 0.25s;
+  width: 70px;
+  border-radius: 4px;
+  margin: 20px 0 10px;
+  text-align: center;
+  font-size: 16px;
+  background-color: var(--primary-color);
+}
+
+.login__notAccount .btn-close:hover {
+  background-color: var(--red-color);
+}
+
+.login__register-sigup {
+  color: var(--blue);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.login__register-sigup:hover {
+  color: var(--red-color);
+}

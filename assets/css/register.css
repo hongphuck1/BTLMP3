@@ -1,0 +1,154 @@
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #f0eef0;
+  display: flex;
+  position: relative;
+}
+
+.app {
+  margin: auto;
+}
+
+.register {
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  top: 50%;
+  left: 150%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  z-index: 20000;
+  /* animation: showLogin 0.8s ease forwards; */
+  animation: showAnimationRegister 0.8s ease forwards;
+}
+
+@keyframes showAnimationRegister {
+  from {
+    left: 150%;
+    transform: rotate(0);
+  }
+  to {
+    left: 0%;
+    top: 0%;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hideAnimationRegister {
+  from {
+    left: 50%;
+    top: 50%;
+  }
+
+  to {
+    left: -400%;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes Loading {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.register-bar {
+  width: 430px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+}
+
+.register-name {
+  color: #158b7e;
+  font-size: 22px;
+  text-align: center;
+  font-weight: 500;
+  padding: 4px 0 20px;
+}
+
+.register-title {
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 40px;
+  color: #666;
+}
+
+.register-form {
+  font-size: 16px;
+}
+
+.form-input {
+}
+
+.form-input.invalid input {
+  border: 2px solid #f32a2a;
+  background-color: #fad1d1;
+}
+
+.form-input.invalid .form-messenger {
+  color: #f32a2a;
+}
+
+.form-input-name {
+  padding-bottom: 4px;
+  color: #444;
+}
+
+.form-input input {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  padding-left: 10px;
+
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  color: #888;
+  transition: all 0.4s;
+}
+
+.form-input input:hover {
+  border: 2px solid #33cdb5;
+}
+
+.form-input + .form-input {
+  margin-top: 20px;
+}
+
+.register-btn {
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
+  height: 40px;
+  background-color: #158b7e;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  /* border: 1px solid #0b685d; */
+  color: #fff;
+  margin: 35px 0 10px;
+  cursor: pointer;
+}
+
+.register-rules {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+}
+
+.form-messenger {
+  margin-top: 4px;
+  font-size: 13px;
+  transition: all 0.4s;
+}

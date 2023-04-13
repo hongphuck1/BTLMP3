@@ -1,6 +1,7 @@
 const body = document.querySelector("body");
 const tippys = document.querySelectorAll(".tippys");
 const layoutTag = document.querySelector(".layout");
+
 visible();
 function visible() {
   tippys.forEach((elem, index) => {
@@ -20,7 +21,7 @@ function visible() {
 
       // !index hide tippy
       tippys.forEach((tippy, index2) => {
-        console.log(index2);
+        // console.log(index2);
         if (index2 !== index) {
           tippy.parentElement.classList.remove("active");
         }
@@ -63,3 +64,9 @@ layoutTag.onscroll = () => {
     ? (body.style = "--header-scroll-bottom: 0")
     : (body.style = "--header-scroll-bottom: 100%");
 };
+
+//loading logo
+const logoLoading = document.querySelector(".sidebar__logo");
+logoLoading.addEventListener("click", () => {
+  window.location.reload();
+});

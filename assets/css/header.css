@@ -334,6 +334,31 @@
   margin-right: 0;
 }
 
+.nav__account {
+  display: flex !important;
+}
+
+/* .nav__account.show {
+  display: flex !important;
+} */
+
+.nav__account.show ~ .nav__login {
+  display: none !important;
+}
+
+.nav__login {
+  display: flex !important;
+  justify-content: center;
+}
+
+.nav__account.nav__login {
+  border-radius: 10px;
+  width: 100px;
+}
+
+.nav__login.active {
+}
+
 .nav__account--logo {
   border: 1px solid rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -345,6 +370,7 @@
 }
 
 /* user account */
+
 .nav__account .account__user {
   width: 200px;
   padding: 6px;

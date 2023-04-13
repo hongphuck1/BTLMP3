@@ -21,10 +21,10 @@ const icon = {
   queueMusic: `<span class="material-symbols-outlined">queue_music</span>`,
   branding: `<span class="material-symbols-outlined">branding_watermark</span>`,
   movie: `<span class="material-symbols-outlined">movie</span>`,
-  
+
   playArrow: `<span class="material-symbols-rounded">play_arrow</span>`,
   pause: `<span class="material-symbols-outlined">pause</span>`,
-  iconPlaying:  `<img src='./assets/icons/icon_playing.gif'>`,
+  iconPlaying: `<img src='./assets/icons/icon_playing.gif'>`,
 };
 
 // Gallery data
